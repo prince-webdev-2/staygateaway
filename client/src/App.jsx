@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
-import { useLocation } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import Home from './pages/Home.jsx';
 
 function App() {
   const isUserPath= useLocation().pathname.includes('owner');
@@ -8,6 +9,11 @@ function App() {
   return (
     <>
       { !isUserPath && <Navbar /> }
+      <div className='min-h-[70vh]'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </div>
     </>
   )
 }
