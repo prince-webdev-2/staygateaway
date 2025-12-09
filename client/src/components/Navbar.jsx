@@ -48,7 +48,7 @@ const Navbar = () => {
 
                 {/* Logo */}
                 <Link to='/'>
-                        <h1 className={`text-2xl tracking-[5px] text-white`}>STAY <span className='text-[red]'>GATEWAY</span></h1>
+                        <h1 className={`text-2xl tracking-[5px] ${isScrolled ? 'text-black' : 'text-white'}`}>STAY <span className='text-[red]'>GATEAWAY</span></h1>
                 </Link>
 
                 {/* Desktop Nav */}
